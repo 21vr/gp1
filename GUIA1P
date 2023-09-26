@@ -1,0 +1,111 @@
+//VEL.MEDIDA//
+
+Module MainModule
+    Sub Main()
+        ' Datos de entrada
+        Dim distanciaKm As Double = 42.195
+        Dim tiempoHoras As Double = 2
+        Dim tiempoMinutos As Double = 30
+
+        ' Calcular la velocidad en diferentes unidades
+        Dim velocidadKmPorHora As Double = distanciaKm / tiempoHoras
+        Dim velocidadKmPorMinuto As Double = distanciaKm / (tiempoHoras * 60 + tiempoMinutos)
+        Dim velocidadKmPorSegundo As Double = distanciaKm / (tiempoHoras * 3600 + tiempoMinutos * 60)
+        Dim velocidadMPorMinuto As Double = (distanciaKm * 1000) / (tiempoHoras * 60 + tiempoMinutos)
+        Dim velocidadMPorSegundo As Double = (distanciaKm * 1000) / (tiempoHoras * 3600 + tiempoMinutos * 60)
+
+        ' Mostrar resultados
+        Console.WriteLine("Velocidad media en Km/h: " & velocidadKmPorHora)
+        Console.WriteLine("Velocidad media en Km/min: " & velocidadKmPorMinuto)
+        Console.WriteLine("Velocidad media en Km/s: " & velocidadKmPorSegundo)
+        Console.WriteLine("Velocidad media en m/min: " & velocidadMPorMinuto)
+        Console.WriteLine("Velocidad media en m/s: " & velocidadMPorSegundo)
+
+        ' Datos del desarrollador
+        Console.WriteLine("Desarrollado por: Francisco Andrés García Mena, GM3491012021")
+
+        Console.ReadLine() ' Esperar a que el usuario presione Enter
+    End Sub
+End Module
+
+
+//NUM DIVISOR//
+
+Module MainModule
+    Sub Main()
+        ' Datos de entrada
+        Console.Write("Ingrese el primer número: ")
+        Dim num1 As Integer = Integer.Parse(Console.ReadLine())
+        Console.Write("Ingrese el segundo número: ")
+        Dim num2 As Integer = Integer.Parse(Console.ReadLine())
+
+        ' Verificar si num1 es divisor de num2
+        If num2 Mod num1 = 0 Then
+            Console.WriteLine(num1 & " es divisor de " & num2)
+        Else
+            Console.WriteLine(num1 & " no es divisor de " & num2)
+        End If
+
+        ' Datos del desarrollador
+        Console.WriteLine("Desarrollado por: Francisco Andrés García Mena, GM3491012021")
+
+        Console.ReadLine() ' Esperar a que el usuario presione Enter
+    End Sub
+
+    // MAYOR MEDIO //
+
+    Module MainModule
+    Sub Main()
+        ' Datos de entrada
+        Console.Write("Ingrese el primer número: ")
+        Dim num1 As Integer = Integer.Parse(Console.ReadLine())
+        Console.Write("Ingrese el segundo número: ")
+        Dim num2 As Integer = Integer.Parse(Console.ReadLine())
+        Console.Write("Ingrese el tercer número: ")
+        Dim num3 As Integer = Integer.Parse(Console.ReadLine())
+
+        ' Encontrar el mayor, medio y menor
+        Dim mayor As Integer = Math.Max(num1, Math.Max(num2, num3))
+        Dim menor As Integer = Math.Min(num1, Math.Min(num2, num3))
+        Dim medio As Integer = (num1 + num2 + num3) - mayor - menor
+
+        ' Mostrar resultados
+        Console.WriteLine("Mayor: " & mayor)
+        Console.WriteLine("Medio: " & medio)
+        Console.WriteLine("Menor: " & menor)
+
+        ' Datos del desarrollador
+        Console.WriteLine("Desarrollado por: Francisco Andrés García Mena, GM3491012021")
+
+        Console.ReadLine() ' Esperar a que el usuario presione Enter
+    End Sub
+End Module
+
+//INFRACCIONES//
+
+Module MainModule
+    Sub Main()
+        ' Solicitar al usuario que ingrese el número total de infracciones
+        Console.Write("Ingrese el número total de infracciones: ")
+        Dim totalInfracciones As Integer = Integer.Parse(Console.ReadLine())
+
+        ' Calcular promedios
+        Dim porcentajeMatutino As Double = 0.2
+        Dim porcentajeTarde As Double = 0.35
+        Dim porcentajeNoche As Double = 0.45
+
+        Dim promedioMatutino As Double = totalInfracciones * porcentajeMatutino
+        Dim promedioTarde As Double = totalInfracciones * porcentajeTarde
+        Dim promedioNoche As Double = totalInfracciones * porcentajeNoche
+
+        ' Mostrar resultados
+        Console.WriteLine("Promedio diario matutino de infracciones: " & promedioMatutino)
+        Console.WriteLine("Promedio diario en la tarde de infracciones: " & promedioTarde)
+        Console.WriteLine("Promedio diario nocturno de infracciones: " & promedioNoche)
+
+        ' Datos del desarrollador
+        Console.WriteLine("Desarrollado por: Francisco Andrés García Mena, GM3491012021")
+
+        Console.ReadLine() ' Esperar a que el usuario presione Enter
+    End Sub
+End Module
